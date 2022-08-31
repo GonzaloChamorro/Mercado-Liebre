@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 
 app.listen(process.env.PORT || 3000, ()=>{
@@ -8,13 +8,13 @@ app.listen(process.env.PORT || 3000, ()=>{
 });
 
 app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
+    res.sendFile(__dirname + '/Views/home.html');
 });
 
 app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
+    res.sendFile(__dirname + '/Views/login.html');
 });
 
 app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
+    res.sendFile(__dirname + '/Views/register.html');
 });
